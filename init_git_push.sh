@@ -32,6 +32,6 @@ fi
 
 git add .
 
-git commit -m "Initial commit" 2> /dev/null || "Nothing to commit."
+git commit -m "Initial commit" 2> /dev/null || echo "Nothing to commit."
 
 git push -u origin main
