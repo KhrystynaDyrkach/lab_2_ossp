@@ -11,12 +11,12 @@ REPO_URL=$2
 cd "$DIRECTORY" || { echo "Directory does not exist: $DIRECTORY"; exit 1; }
 
 if ! git config --global user.name > /dev/null; then
-     read -p "KhrystynaDyrkach" GIT_NAME"
+     read -p "Enter your Git username: " GIT_NAME"
      git config --global user.name "GIT_NAME"
 fi
 
 if ! git config --global user.email > /dev/null; then
-     read -p "khrystyna.dyrkach@gmail.com" GIT_EMAIL"
+     read -p "Enter your Git email: " GIT_EMAIL"
      git config --global user.email "GIT_EMAIL"
 fi
 
