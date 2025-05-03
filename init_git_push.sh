@@ -11,12 +11,12 @@ REPO_URL=$2
 cd "$DIRECTORY" || { echo "Directory does not exist: $DIRECTORY"; exit 1; }
 
 if ! git config --global user.name > /dev/null; then
-     read -p "Enter your Git username: " GIT_NAME"
+     read -p "Enter your Git username: " GIT_NAME
      git config --global user.name "GIT_NAME"
 fi
 
 if ! git config --global user.email > /dev/null; then
-     read -p "Enter your Git email: " GIT_EMAIL"
+     read -p "Enter your Git email: " GIT_EMAIL
      git config --global user.email "GIT_EMAIL"
 fi
 
@@ -24,7 +24,7 @@ if [ ! -d ".git" ]; then
      git init
 fi
 
-git checkout -b main 2> /dev/nulln || git branch -M main
+git checkout -b main 2> /dev/null || git branch -M main
 
 if ! git remote | grep origin > /dev/null; then
      git remote add origin "$REPO_URL"
